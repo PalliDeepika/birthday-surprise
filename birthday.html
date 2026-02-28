@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Happy Birthday Dear 🎂</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background: linear-gradient(135deg, #ff758c, #ff7eb3);
+            color: white;
+        }
+
+        .container {
+            padding: 20px;
+        }
+
+        h1 {
+            margin-top: 30px;
+        }
+
+        img {
+            width: 250px;
+            margin: 15px;
+            border-radius: 20px;
+            box-shadow: 0 0 20px rgba(0,0,0,0.3);
+        }
+
+        .message {
+            font-size: 20px;
+            margin: 30px 20px;
+            white-space: pre-line;
+            line-height: 1.6;
+        }
+
+        button {
+            padding: 12px 25px;
+            border: none;
+            border-radius: 25px;
+            font-size: 16px;
+            cursor: pointer;
+            background: white;
+            color: #ff4e88;
+            margin-top: 20px;
+        }
+
+        button:hover {
+            background: #ff4e88;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>🎂 Happy Birthday Dear 🎂</h1>
+
+    <img src="https://thumbs.dreamstime.com/b/beautiful-cute-little-fairy-girl-princess-big-cake-inscription-happy-birthday-vector-illustration-hand-drawn-151434855.jpg">
+    <img src="https://png.pngtree.com/background/20230524/original/pngtree-cartoon-birthday-scene-with-several-birthday-animals-and-balloons-picture-image_2708059.jpg">
+
+    <div class="message">
+My sweetest Dear 💕
+
+You are my happiness, my biggest support, and my forever best friend.
+May your life be filled with smiles, success, and endless love.
+
+Stay amazing and keep shining always ✨
+    </div>
+
+    <button onclick="openSurprise()">Click for Surprise 💌</button>
+
+    <p><b>With lots of love,</b><br>💖 Your Chota Packet 💖</p>
+</div>
+
+<script>
+function openSurprise() {
+
+    const newTab = window.open("", "_blank");
+
+    newTab.document.write(`
+    <html>
+    <head>
+        <title>Surprise 💖</title>
+        <style>
+            body {
+                margin: 0;
+                padding: 0;
+                text-align: center;
+                background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+                font-family: Arial, sans-serif;
+            }
+
+            h1 {
+                margin-top: 40px;
+                color: #ff4e88;
+            }
+
+            .img-box {
+                opacity: 0;
+                transform: translateY(40px);
+                transition: all 1s ease;
+                margin-top: 30px;
+            }
+
+            .show {
+                opacity: 1;
+                transform: translateY(0);
+            }
+
+            img {
+                width: 300px;
+                border-radius: 20px;
+                box-shadow: 0 0 25px rgba(0,0,0,0.3);
+                cursor: pointer;
+            }
+
+            .popup {
+                display: none;
+                position: fixed;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                background: white;
+                color: #ff4e88;
+                padding: 25px 35px;
+                border-radius: 20px;
+                box-shadow: 0 0 30px rgba(0,0,0,0.4);
+                font-size: 20px;
+                font-weight: bold;
+                width: 85%;
+                max-width: 450px;
+                text-align: center;
+            }
+
+            .back-btn, .last-btn {
+                margin-top: 20px;
+                padding: 10px 20px;
+                border: none;
+                border-radius: 20px;
+                background: #ff4e88;
+                color: white;
+                cursor: pointer;
+            }
+
+            .last-btn {
+                display: none;
+            }
+        </style>
+    </head>
+    <body>
+
+        <h1>💖 Special Surprise For You 💖</h1>
+
+        <div class="img-box" id="box1">
+            <img id="firstImage" src="https://img.freepik.com/free-photo/cartoon-people-celebrating-birthday-party_23-2151556540.jpg">
+        </div>
+
+        <div class="img-box" id="box2">
+            <img id="secondImage" src="https://i.pinimg.com/736x/8f/6e/ec/8f6eec48fa375d01feb7690944c690cf.jpg">
+        </div>
+
+        <div class="img-box" id="box3">
+            <img id="thirdImage" src="https://png.pngtree.com/png-clipart/20250420/original/pngtree-two-smiling-anime-girls-hugging-with-pink-roses-png-image_20839355.png">
+        </div>
+
+        <div class="popup" id="popup">
+            <div id="popupText"></div>
+            <button class="back-btn" id="backBtn">Click Back 💌</button>
+            <button class="last-btn" id="lastBtn">One Last Word 💌</button>
+        </div>
+
+        <script>
+
+            setTimeout(() => box1.classList.add('show'), 500);
+            setTimeout(() => box2.classList.add('show'), 1500);
+            setTimeout(() => box3.classList.add('show'), 2500);
+
+            const popup = document.getElementById("popup");
+            const popupText = document.getElementById("popupText");
+            const backBtn = document.getElementById("backBtn");
+            const lastBtn = document.getElementById("lastBtn");
+            const firstImage = document.getElementById("firstImage");
+            const secondImage = document.getElementById("secondImage");
+            const thirdImage = document.getElementById("thirdImage");
+
+            let currentStep = 0;
+
+            firstImage.onclick = function() {
+                popup.style.display = "block";
+                popupText.innerHTML = "Dear Bestie I love you to the moon and back..! 💖";
+                lastBtn.style.display = "none";
+                currentStep = 1;
+            };
+
+            secondImage.onclick = function() {
+                popup.style.display = "block";
+                popupText.innerHTML = "When I Count My Blessings , I Count You Twice .You're The Friend Everyone Wishes They Had , But Only I Have The Privilage Of Calling You My Best Friend 💕";
+                lastBtn.style.display = "none";
+                currentStep = 2;
+            };
+
+            thirdImage.onclick = function() {
+                popup.style.display = "block";
+                popupText.innerHTML = "You are one of the best thing that ever happened to me 💖";
+                lastBtn.style.display = "inline-block";
+                currentStep = 3;
+            };
+
+            backBtn.onclick = function() {
+                popup.style.display = "none";
+
+                if (currentStep === 1) {
+                    secondImage.scrollIntoView({behavior:"smooth"});
+                } 
+                else if (currentStep === 2) {
+                    thirdImage.scrollIntoView({behavior:"smooth"});
+                }
+            };
+
+            lastBtn.onclick = function() {
+
+                const finalTab = window.open("", "_blank");
+
+                finalTab.document.write(\`
+                <html>
+                <head>
+                    <title>Forever Best Friend 💖</title>
+                    <style>
+                        body {
+                            margin: 0;
+                            padding: 0;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            height: 100vh;
+                            text-align: center;
+                            background: linear-gradient(135deg, #ff758c, #ff7eb3);
+                            font-family: Arial, sans-serif;
+                            color: white;
+                        }
+                        h1 {
+                            font-size: 55px;
+                            padding: 20px;
+                        }
+                    </style>
+                </head>
+                <body>
+                    <h1>
+                        No matter what happens in our lifes,<br>
+                        I will always stand beside you.<br><br>
+                        Happy Birthday My Forever Best Friend 💖✨
+                    </h1>
+                </body>
+                </html>
+                \`);
+
+                finalTab.document.close();
+            };
+
+        <\/script>
+
+    </body>
+    </html>
+    `);
+
+    newTab.document.close();
+}
+</script>
+
+</body>
+</html>
